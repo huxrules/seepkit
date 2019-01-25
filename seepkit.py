@@ -18,14 +18,24 @@
 
 
 import argparse
+import multiPROC
 
 #import sonar_data_control as SDC
 
-def runProgramWithListOfFiles(filelist,output):
+def runProgramWithListOfFiles(listOfFiles,output):
+	listTextFile = open(listOfFiles,"r")
+	fileList = []
+	for i in listTextFile:
+		fileList.append(i.rstrip())
 	
+	mutliProc.createProcesses(fileList,output)
+
+
 
 def runProgramWithSingleFile(filename,output):
-	pass
+	fileList = []
+	fileList.append(filename)
+	mutliProc.createProcesses(fileList,output)
 
 if __name__ == "__main__":
 	descriptionText = """

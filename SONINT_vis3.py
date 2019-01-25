@@ -208,7 +208,7 @@ def vis4kWCDPing(wcd_angle_array, wcd_range_array, wcd_data_array, maxdepth = ""
 	projectedArray = np.full([maxPixelCountY,maxPixelCountX], 127, dtype="float64" )
 
 
-	projectedArray = astros.bats(angleStartArray, angleEndArray, depthStartArray, depthEndArray, wcd_data_array, distanceArray, angleArray, projectedArray)
+	projectedArray = HLProjector.WCDProjector(angleStartArray, angleEndArray, depthStartArray, depthEndArray, wcd_data_array, distanceArray, angleArray, projectedArray)
 
 
 	return(projectedArray)
