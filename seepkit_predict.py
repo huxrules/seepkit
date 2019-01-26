@@ -20,8 +20,8 @@ elif osname == 'darwin':
 	sys.path.append('/Users/huxrules/MASTER_EXPLODER/GIT_ME/MASTEREXPLODER/MCP')
 	#tensorboard = TensorBoard(log_dir="/Users/huxrules/MASTER_EXPLODER/GIT_ME/MASTEREXPLODER/MISC/logs/{}".format(time()))"""
 
-import mcp3 as MCP
-import sonar_data_store3 as SDS 
+#import mcp3 as MCP
+#import sonar_data_store3 as SDS 
 
 class WCDPredictor(object):
 
@@ -42,11 +42,11 @@ class WCDPredictor(object):
 
   
 
-		json_file = open('../models/classifier_series_1_series_2.json') 
+		json_file = open('/Users/huxrules/SeepIntelPro/GITHUB/seepkit/Model/huxlabs_seepkit_binary_classifier_gen0.json') 
 		loaded_model_json = json_file.read() 
 		json_file.close() 
 		self.classifier = model_from_json(loaded_model_json) 
-		self.classifier.load_weights('../models/classifier_series_1_series2.h5') 
+		self.classifier.load_weights('/Users/huxrules/SeepIntelPro/GITHUB/seepkit/Model/huxlabs_seepkit_binary_classifier_gen0.h5') 
 
 
 	

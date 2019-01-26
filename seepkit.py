@@ -28,19 +28,21 @@ def runProgramWithListOfFiles(listOfFiles,output):
 	for i in listTextFile:
 		fileList.append(i.rstrip())
 	
-	mutliProc.createProcesses(fileList,output)
+	multiPROC.createProcesses(fileList,output)
 
 
 
 def runProgramWithSingleFile(filename,output):
 	fileList = []
 	fileList.append(filename)
-	mutliProc.createProcesses(fileList,output)
+	multiPROC.createProcesses(fileList,output)
 
 if __name__ == "__main__":
+
+
 	descriptionText = """
-SeepKit v 0.1 by Huxlabs LLC
-"""
+	SeepKit v 0.1 by Huxlabs LLC
+	"""
 	commandParser = argparse.ArgumentParser(description = descriptionText)
 	commandParser.add_argument("-l","--list",help="path to a textfile containing a list of files")
 	commandParser.add_argument("-f","--file",help="path to a single file")

@@ -3,6 +3,7 @@ import traceback
 import numpy
 import multiprocessing
 import queue
+from time import sleep
 
 import sonar_data_control as SDC
 
@@ -45,16 +46,17 @@ def createProcesses(fileList, output):
 		for i in fileList:
 				commands.append([i,procNum])
 				procNum +=1 
-			#print(commandz)
+		print(commands)
 		filereaderpool = multiprocessing.Pool(processes = 4, maxtasksperchild = 1)
-		results = self.filereaderpool.map_async(multiprocessLineLoad, commands)
+		for x in filereaderpool.imap(multiprocessLineLoad, commands):
+			print(x)
 
-	"""	while True:
-				sleep(2)
-				if not results.ready():
-					print("######## standing by for any errors ########")
-				elif results.ready():
-					print(results.get())
-					break"""
+		#while True:
+		#		sleep(2)
+		#		if not results.ready():
+		#			print("######## standing by for any errors ########")
+		#		elif results.ready():
+		#			print(results.get())
+		#			break
 
 

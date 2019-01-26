@@ -1,6 +1,5 @@
-#include </home/huxrules/Python3.6/Python-3.6.5/Include/Python.h>
-#include </home/huxrules/SeepIntelPro/python/env/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h>
-
+#include </usr/local/Cellar/python/3.6.2/Frameworks/Python.framework/Versions/3.6/include/python3.6m/Python.h>
+#include </Users/huxrules/SeepIntelPro/python/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h>
 
 
 static PyObject * cWCDProjector(PyObject *self, PyObject *args){

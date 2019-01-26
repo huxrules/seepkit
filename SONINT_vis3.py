@@ -21,15 +21,10 @@ import sys
 
 osname = sys.platform
 
-if osname == 'linux':
-
-	sys.path.append('/home/huxrules/SeepIntelPro/MASTEREXPLODER/MISC/build/lib.linux-x86_64-3.6')
-
-elif osname == 'darwin':
-	sys.path.append('/Users/huxrules/MASTER_EXPLODER/git_me/MASTEREXPLODER/MISC/build/lib.macosx-10.12-x86_64-3.6')
+sys.path.append("/Users/huxrules/SeepIntelPro/GITHUB/seepkit/Projection_C/build/lib.macosx-10.12-x86_64-3.6")
 
 
-import astros
+import HLProjector
 
 
 def vis4kWCDPing(wcd_angle_array, wcd_range_array, wcd_data_array, maxdepth = "", maxrange = ""):

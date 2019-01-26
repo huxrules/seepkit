@@ -453,7 +453,7 @@ def wcd_reader_with_model(wcdFileString, procnum):
 					currentRangeArray = np.array(negmaxY, dtype = "float64")
 
 					PredictClass,predictionValue = WCDPingMaster(WCDsamples, pickledWCDSamples,
-												currentAngleArray , currentRangeArray, lineUUID, 
+												currentAngleArray , currentRangeArray, 
 												pingNumber, maxdepthping, maxrangeping, 
 												averageTransPingTilt, timeseconds, 
 												CurrentSwathFlag, pingmode, TXPulseForm, DualSwath,PredictClass)
@@ -494,14 +494,13 @@ def wcd_reader_with_model(wcdFileString, procnum):
 		print(errorString)
 
 def WCDPingMaster(WCDSamples, pickledWCDSamples, currentAngleArray ,
-				 currentRangeArray, lineUUID, pingNumber, maxdepthping, 
+				 currentRangeArray, pingNumber, maxdepthping, 
 				 maxrangeping, averageTransPingTilt, timeseconds, 
 				 CurrentSwathFlag, pingmode, TXPulseForm, DualSwath, PredictClass):
 		
 	
 		npYArray, npXArray, npDataArray = WCDNumpyArray(currentAngleArray,currentRangeArray, WCDSamples)
 		currentWCDArray = npDataArray / 2
-		currentPingUUID = pingUUID
 		currentPingmaxdepth = maxdepthping
 		currentPingmaxrange = maxrangeping
 		try:	
